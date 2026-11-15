@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#110c10">
+  <meta name="description" content="Resolution VIP — resolução e ajustes personalizados para seu estilo de jogo no Free Fire.">
+  <meta name="application-name" content="Resolution VIP">
+  <meta name="apple-mobile-web-app-title" content="Resolution VIP">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./assets/app.css">
+  <title>Resolution VIP | Santx Sensi</title>
+</head>
+<body>
+<main class="app" id="app">
+  <header class="topbar">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 7v8m-3-3 3 3 3-3M10 19h4"/></svg>
+    </div>
+    <div class="brand">
+      <strong>SANTX <span>SENSI</span></strong>
+      <small>RESOLUTION VIP • FREE FIRE</small>
+    </div>
+    <div class="vip-badge">VIP</div>
+  </header>
+
+  <section class="hero" aria-label="Introdução">
+    <div class="eyebrow">RESOLUÇÃO + SENSIBILIDADE</div>
+    <h1>SUA SENSI.<br><span>SEU CONTROLE.</span></h1>
+    <p>Personalize sua resolução, ajuste o arrasto <b>lateral</b> e <b>vertical</b> de forma independente e encontre a combinação que combina com seu estilo no Free Fire.</p>
+  </section>
+
+  <section class="section" aria-labelledby="title1">
+    <div class="section-head">
+      <h2 class="section-title" id="title1"><span class="section-number">01</span> SEU IPHONE</h2>
+      <span class="section-tag">DISPOSITIVO</span>
+    </div>
+    <div class="card">
+      <label class="label" for="iphone">SELECIONE SEU MODELO</label>
+      <div class="select-wrap">
+        <select id="iphone"></select>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+      <div class="device-footer">
+        <div class="native"><small>RESOLUÇÃO NATIVA</small><strong id="nativeSize">2556 × 1179</strong></div>
+        <button class="orientation" id="orientationButton" type="button" aria-label="Alterar orientação">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M8 15h8"/></svg>
+          <span id="orientationText">HORIZONTAL</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="title2">
+    <div class="section-head">
+      <h2 class="section-title" id="title2"><span class="section-number">02</span> RESOLUÇÃO</h2>
+      <span class="section-tag">PERSONALIZÁVEL</span>
+    </div>
+    <div class="card res-card">
+      <div class="res-heading"><strong>LARGURA E ALTURA</strong><span>PIXELS (PX)</span></div>
+      <div class="res-fields">
+        <label class="res-field" for="width"><input id="width" type="number" min="320" max="5000" inputmode="numeric" value="2450"><small>Largura px</small></label>
+        <button class="swap" id="swapButton" type="button" aria-label="Inverter largura e altura">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16m-4-4 4 4-4 4"/><path d="M20 17H4m4-4-4 4 4 4"/></svg>
+        </button>
+        <label class="res-field" for="height"><input id="height" type="number" min="320" max="5000" inputmode="numeric" value="990"><small>Altura px</small></label>
+      </div>
+      <div class="preset-title">RESOLUÇÕES PREDEFINIDAS</div>
+      <div class="presets" role="group" aria-label="Modos de resolução">
+        <button class="preset" type="button" data-mode="alta" aria-pressed="false"><b>ALTA</b><small>100%</small></button>
+        <button class="preset" type="button" data-mode="media" aria-pressed="false"><b>MÉDIA</b><small>90%</small></button>
+        <button class="preset" type="button" data-mode="baixa" aria-pressed="false"><b>BAIXA</b><small>80%</small></button>
+        <button class="preset active" type="button" data-mode="custom" aria-pressed="true"><b>MANUAL</b><small>LIVRE</small></button>
+      </div>
+      <div class="res-note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7h.01"/></svg>
+        <span id="resolutionHint">Edite a largura e a altura ou use os ajustes de sensi abaixo para gerar sua combinação.</span>
+      </div>
+      <div class="metrics">
+        <div class="metric"><small>PROPORÇÃO</small><strong id="aspectRatio">—</strong></div>
+        <div class="metric"><small>MEGAPIXELS</small><strong id="megapixels" class="gold">—</strong></div>
+        <div class="metric"><small>TOTAL PIXELS</small><strong id="totalPixels">—</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="title3">
+    <div class="section-head">
+      <h2 class="section-title" id="title3"><span class="section-number">03</span> AJUSTE DA SENSI</h2>
+      <span class="section-tag">EIXOS X / Y</span>
+    </div>
+    <div class="card sensi-card">
+      <p class="sensi-intro">Prefere movimentar mais para os lados sem subir tanto a mira? Ajuste o <b>horizontal</b> e o <b>vertical</b> separadamente para montar sua resolução personalizada.</p>
+      <div class="axis">
+        <div class="axis-head">
+          <div class="axis-name"><span class="axis-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></span>SENSI LATERAL</div>
+          <strong id="horizontalValue">90</strong>
+        </div>
+        <label class="axis-caption" for="horizontalRange">Movimentação para esquerda e direita</label>
+        <input class="range" id="horizontalRange" type="range" min="0" max="100" value="90" aria-label="Ajuste lateral">
+        <div class="range-labels"><span>BAIXA</span><span>EQUILIBRADA</span><span>ALTA</span></div>
+      </div>
+      <div class="axis">
+        <div class="axis-head">
+          <div class="axis-name"><span class="axis-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></svg></span>SENSI VERTICAL</div>
+          <strong id="verticalValue">32</strong>
+        </div>
+        <label class="axis-caption" for="verticalRange">Arrasto para cima e para baixo</label>
+        <input class="range" id="verticalRange" type="range" min="0" max="100" value="32" aria-label="Ajuste vertical">
+        <div class="range-labels"><span>BAIXA</span><span>EQUILIBRADA</span><span>ALTA</span></div>
+      </div>
+      <div class="sensi-status">
+        <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="5"/></svg><b>ESTILO DO AJUSTE</b></div>
+        <span id="styleLabel">LATERAL FORTE</span>
+      </div>
+      <div class="quick-heading">COMBINAÇÕES RÁPIDAS</div>
+      <div class="quick-grid" role="group" aria-label="Combinações de sensibilidade">
+        <button class="quick active" type="button" data-profile="lateral" aria-pressed="true">
+          <span class="quick-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></span>
+          <span class="quick-copy"><b>LATERAL +</b><small>Mais lados, menos subida</small></span>
+        </button>
+        <button class="quick" type="button" data-profile="antipinar" aria-pressed="false">
+          <span class="quick-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg></span>
+          <span class="quick-copy"><b>ANTI PINAR</b><small>Vertical mais controlada</small></span>
+        </button>
+        <button class="quick" type="button" data-profile="equilibrada" aria-pressed="false">
+          <span class="quick-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="7"/></svg></span>
+          <span class="quick-copy"><b>EQUILIBRADA</b><small>Controle dos dois eixos</small></span>
+        </button>
+        <button class="quick" type="button" data-profile="subida" aria-pressed="false">
+          <span class="quick-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></span>
+          <span class="quick-copy"><b>SUBIDA +</b><small>Mais vertical, menos lados</small></span>
+        </button>
+      </div>
+      <div class="adjustment-footer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v5M5 12v9M12 3v10M12 17v4M19 3v3M19 10v11"/><rect x="2.5" y="8" width="5" height="4" rx="1"/><rect x="9.5" y="13" width="5" height="4" rx="1"/><rect x="16.5" y="6" width="5" height="4" rx="1"/></svg>
+        <span>Ao mover os controles, o Resolution VIP <strong>calcula uma nova largura e altura</strong> para a combinação escolhida.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="title4">
+    <div class="section-head">
+      <h2 class="section-title" id="title4"><span class="section-number">04</span> ATIVAÇÃO DA RESOLUÇÃO</h2>
+      <span class="section-tag">RESOLUTION VIP</span>
+    </div>
+    <div class="save-card">
+      <div class="save-head">
+        <strong>RESOLUÇÃO SELECIONADA</strong>
+        <div class="save-state" id="saveState"><i></i><span id="saveStateText">NÃO ATIVADA</span></div>
+      </div>
+      <div class="final-resolution" id="finalResolution">2450 × 990</div>
+      <div class="final-details" id="finalDevice">iPhone 15 Pro • Personalizada</div>
+      <div class="final-axes">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg>LATERAL <b id="finalHorizontal">90</b></span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></svg>VERTICAL <b id="finalVertical">32</b></span>
+      </div>
+      <div class="actions">
+        <button class="primary" id="activateButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10M6.1 5.8a9 9 0 1 0 11.8 0"/></svg>
+          <span>ATIVAR RESOLUÇÃO</span>
+        </button>
+        <button class="copy" id="copyButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+          COPIAR
+        </button>
+      </div>
+      <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+    </div>
+    <div class="finish">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12l3 3v15H4V3h1Z"/><path d="M8 3v6h8V3M8 21v-8h8v8"/></svg>
+      <div>
+        <strong>PRONTO PARA SUA PRÓXIMA PARTIDA</strong>
+        <p>Ative sua resolução, deixe o Resolution VIP em segundo plano e entre no Free Fire. Seu ajuste ficará guardado no aplicativo.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <a class="community" href="https://discord.gg/santxsensi" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7 6.5 11 12 4 17.5 11 22 7 19.5 19H4.5L2 7Z"/><path d="M5.5 22h13"/></svg>
+      COMUNIDADE VIP
+    </a>
+  </footer>
+</main>
+
+<!-- Efeito de blackout rápido (900ms), reiniciado a cada ativação. -->
+<div class="activation-overlay" id="activationOverlay" role="status" aria-live="polite" hidden>
+  <div class="activation-content">
+    <div class="activation-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M12 6v9m-3-3 3 3 3-3M10 19h4"/></svg></div>
+    <span class="activation-label">ATIVANDO RESOLUÇÃO</span>
+    <div class="activation-progress"><span></span></div>
+    <span class="activation-caption">RESOLUTION VIP</span>
+  </div>
+</div>
+<script src="./assets/app.js" defer></script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{
+  navigator.serviceWorker.register('./sw.js').catch(()=>{});
+});}
+</script>
+</body>
+</html>
